@@ -74,6 +74,7 @@ const UserForm = () => {
           <Input
             type="text"
             name="name"
+            data-testid="user-name"
             value={userData.name}
             onChange={handleChange}
             required
@@ -84,6 +85,7 @@ const UserForm = () => {
           <Input
             type="email"
             name="email"
+            data-testid="user-email"
             value={userData.email}
             onChange={handleChange}
             required
@@ -94,6 +96,7 @@ const UserForm = () => {
           <Input
             type="tel"
             name="phone"
+            data-testid="user-phone"
             value={userData.phone}
             onChange={handleChange}
             required
