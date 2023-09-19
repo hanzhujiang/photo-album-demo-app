@@ -8,7 +8,7 @@ const Form = styled.form`
   align-items: center;
   margin: 20px;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 `;
@@ -35,7 +35,6 @@ const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
   &:hover {
     background-color: darkblue;
   }
@@ -53,10 +52,9 @@ const UserForm = () => {
         'https://jsonplaceholder.typicode.com/users',
         userData
       );
-      setUserData({ name: '', email: '', phone: '' })
-      alert(`New user ${response.data.name} has been submitted.`)
+      console.log('Response from server:', response.data);
     } catch (error) {
-      alert(error?.message)
+      console.error('Error:', error);
     }
   };
 
